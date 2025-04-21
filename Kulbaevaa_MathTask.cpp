@@ -1,16 +1,6 @@
 #include <iostream>
 #include "Kulbaevaa_MathTask.h"
 using namespace std;
-int main()
-// Отделяет дробную часть числа
-double getFractionalPart(double num) {
-    return num - floor(num);
-}
-
-// Возвращает целую часть числа
-int getIntegerPart(double num) {
-    return static_cast<int>(num);
-}
 
 int main() {
     double x, y, z;
@@ -23,9 +13,7 @@ int main() {
     cout << "Введите вещественное число z: ";
     cin >> z;
       // Сумма дробных частей
-      double sumFractionalParts = getFractionalPart(x) +
-      getFractionalPart(y) +
-      getFractionalPart(z);
+      double sumFractionalParts = getFractionalPart(x) +getFractionalPart(y) +getFractionalPart(z);
 
 // Сумма целых частей
 int sumIntegerParts = getIntegerPart(x) +

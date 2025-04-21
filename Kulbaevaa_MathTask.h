@@ -29,7 +29,15 @@ void EnterDigit(int& varLink, const string& label) {
     } while(!UserInput(raw_input));  // Пока ввод некорректен, запрашиваем заново
     varLink = stoi(raw_input);       // Преобразовываем в число и сохраняем
 }
+// Отделяет дробную часть числа
+double getFractionalPart(double num) {
+    return num - floor(num);
+}
 
+// Возвращает целую часть числа
+int getIntegerPart(double num) {
+    return static_cast<int>(num);
+}
 
 
 #endif /* _KULBAEVA_MATHTASK_H_ */
